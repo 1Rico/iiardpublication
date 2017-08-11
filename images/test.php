@@ -237,7 +237,7 @@ require_once( "inc/search.php" );
 
 									</select>
 									<hr>
-									<img class="img-responsive" id="loader" src="images/loader.gif" width="100" height="100" style="margin-left: auto; margin-right: auto">
+									<img class="img-responsive" id="loader" src="images/loader.gif" style="margin-left: auto; margin-right: auto">
 									<div id="BTC">
 									
 										<h4>Please make a transfer of <code id="amount"></code>BTC to <code>1PwvpTqMY83FCnbt4tVkHvjcofE4YR9YYe</code> to complete this transaction.</h4>
