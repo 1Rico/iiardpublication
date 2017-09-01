@@ -321,12 +321,11 @@ $(window).load(function() {
 		  <h3 class="title" style="margin-top:-70px;"> <?php echo $row['journal_name_full']; ?><span>(<?php echo $row['ISSN']; ?>) <br>Back Issue</span></h3>
                 <hr class="bs-docs-separator wow fadeInDown animated" data-wow-delay=".5s">
           			
-		<div class="col-md-12 fadeInLeft animated" style="height: 100%;
+                    <div class="col-md-12 fadeInLeft animated" style="height: 100%;
 max-height: 550px;
 overflow-y: scroll;
 ">
-                   
-                   <ul class="faq">
+<ul class="faq">
                     
                     
 				<?php
@@ -570,29 +569,13 @@ overflow-y: scroll;
 					</ul>
 				</li><?php } } ?>
                 
-                <?php 
-				if($row_v34 >0 ){
-					if(file_exists($pathv34)){//vol2n5?>
-                <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 4<span class="icon"> </span></a>
-					<ul>
-                 <?php
-				 while($rowv34 = $stmtv34->fetch(PDO::FETCH_ASSOC)){
-					?>
-						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv34['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv34['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv34['pub_author']; ?></p> </li>
-                                  <?php } ?>
-                        										
-					</ul>
-				</li><?php } } ?>
-
-                
-                
-                
 				<!--<li class="item2 wow fadeInDown animated" data-wow-delay=".5s"><a href="#">The standard Lorem Ipsum passage Etiam faucibus viverra libero vel efficitur. Ut semper nisl ut laoreet ultrices ?<span class="icon"> </span></a>
 					<ul>
 						<li class="subitem1"><p> Tincidunt ut laoreet dolore At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p></li>										
 					</ul>
 				</li>-->			
 			</ul>
+</div>
                     
                     
                     <br>
@@ -621,7 +604,6 @@ overflow-y: scroll;
 				</li> <?php } ?>
   		
 			</ul>
-			</div>
                     
 
                <div class="clearfix"> </div>
