@@ -10,7 +10,7 @@ if (isset($_GET['pg'])){
 }
 
 
-$month = "MARCH";
+$month = "SEPTEMBER";
 $stmt_review = $db->prepare("SELECT * FROM reviews WHERE month = :month");
 $stmt_review->bindParam(':month', $month, PDO::PARAM_STR);
 $stmt_review->execute();
@@ -127,8 +127,7 @@ $stmt32->execute();
 <meta name="Description" content="IIARD Publications is an independent institution in Africa. It focuses on the developmental issues of the continent, by providing a medium for interaction between researchers in the academic community. Its main purpose is to foster the relationship between researchers and to create an enabling environment for contributors and academicians to share ideas that relates to developmental issues."> 
 <meta name="keyword" content="iiardpub, iiard, research, publication, 'publications', publications, journal, journals, institute, 'publication company', 'online publication', 'academic research and development', 'international institute',iiardpublication, 'academic research', 'international journals', 'international publications', 'international journal','international publication'">
 
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
+
 <!--//for-mobile-apps -->
 <!--Custom Theme files -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -138,13 +137,6 @@ $stmt32->execute();
 <!--js-->
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
-
-<!--scroll plugin-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/jquery.marquee.js"></script>
-<script src="jquery.pause.js"></script>
-
-
 <!--//js-->
 <!--cart-->
 <script src="js/simpleCart.min.js"></script>
@@ -156,33 +148,15 @@ $stmt32->execute();
 <link href='//fonts.googleapis.com/css?family=Fascinate' rel='stylesheet' type='text/css'>
 <!--web-fonts-->
 <!--animation-effect-->
+
 <link href="css/animate.min.css" rel="stylesheet"> 
 
-<script>
-function doesConnectionExist() {
-    var xhr = new XMLHttpRequest();
-    var file = "http://sharenet.io/assets/images/email/email_logo.png";
-    var randomNum = Math.round(Math.random() * 10000);
- 
-    xhr.open('HEAD', file + "?rand=" + randomNum, true);
-    xhr.send();
-     
-    xhr.addEventListener("readystatechange", processRequest, false);
- 
-    function processRequest(e) {
-      if (xhr.readyState == 4) {
-        if (xhr.status >= 200 && xhr.status < 304) {
-          alert("connection exists!");
-        } else {
-          alert("connection doesn't exist!");
-        }
-      }
-    }
-}
- </script>
-	
+<?php include_once("inc/marquee.php"); ?>
+
 </head>
 <body>
+
+
 	<!--header-->
 	
 	<?php include_once("inc/header.php"); ?>
@@ -192,7 +166,6 @@ function doesConnectionExist() {
  <div class="trend wow zoomIn animated" data-wow-delay=".5s">
  
  <div class="container">
-		<a onclick="doesConnectionExist();"><center style="border:2px solid black;padding:10px;background:#EEE;font-size:40px;cursor:pointer;">CHECK NOW (JS)</center></a>
 			
             <!--PAGE ONE-->
             <div class="col-md-9 product-model-sec" <?php if(@$pg != 1){?> style="display: none; <?php } ?>">
@@ -214,15 +187,79 @@ function doesConnectionExist() {
 							<p><span style=" text-align:right; color:#FF590F">ISSN 2406-8934</span></p>
 						</div>
 						<div class="ofr">
-							<p style="font-size: 14.4px;"><span cl>IIARD INTERNATIONAL JOURNAL OF BANKING AND FINANCE RESEARCH</span></p>
+							<p><span cl>IIARD INTERNATIONAL JOURNAL OF BANKING AND FINANCE RESEARCH</span></p>
 						</div>
 					</div>
 				</div>
 				
+				<div class="product-grids product-grids-mdl simpleCart_shelfItem wow fadeInUp animated" data-wow-delay=".7s">
+					<div class="new-top">
+						<a href="journal/?j=IJEBM"><img src="get/IJEB.jpg" class="img-responsive" alt=""/></a>
+						<div class="new-text">
+							<ul>
+								<li><a href="journal/?j=IJEBM">View Details </a></li>
+								
+								
+							</ul>
+						</div>
+					</div>
+					<div class="new-bottom">
+						<h5><a href="journal/?j=IJEBM">IJEBM</a></h5>
+						<div class="rating">
+							<p><span style=" text-align:right; color:#FF590F">ISSN 2489-0065</span></p>
+						</div>
+						<div class="ofr">
+							<p><span cl>IIARD INTERNATIONAL JOURNAL OF ECONOMICS AND BUSINESS MANAGEMENT</span></p>
+						</div>
+					</div>
+				  </div>
+   
+                <div class="product-grids simpleCart_shelfItem wow fadeInUp animated" data-wow-delay=".5s">
+					<div class="new-top">
+						<a href="journal/?j=IJHPR"><img src="get/IJHP.jpg"  class="img-responsive" alt=""/></a>
+                        <!-- <span class="star"> </span>-->
+						<div class="new-text">
+							<ul>
+								<li><a href="journal/?j=IJHPR">View Details </a></li>
+								
+								
+							</ul>
+						</div>
+					</div>
+					<div class="new-bottom">
+						<h5><a href="journal/?j=IJHPR">IJHPR</a></h5>
+						<div class="rating">
+							<p><span style=" text-align:right; color:#FF590F">ISSN 2545-5737</span></p>
+						</div>
+						<div class="ofr">
+							<p><span cl>INTERNATIONAL JOURNAL OF HEALTH AND PHARMACEUTICAL RESEARCH</span></p>
+						</div>
+					</div>
+				</div>
 				
-
-
-<div class="product-grids product-grids-mdl simpleCart_shelfItem wow fadeInUp animated" data-wow-delay=".7s">
+				<div class="product-grids simpleCart_shelfItem wow fadeInUp animated" data-wow-delay=".5s">
+					<div class="new-top">
+						<a href="journal/?j=IJGEM"><img src="get/IJGEM.jpg" class="img-responsive" alt=""/></a>
+						<div class="new-text">
+							<ul>
+								<li><a href="journal/?j=IJGEM">View Details </a></li>
+								
+								
+							</ul>
+						</div>
+					</div>
+					<div class="new-bottom">
+						<h5><a href="journal/?j=IJGEM">IJGEM</a></h5>
+						<div class="rating">
+							<p><span style=" text-align:right; color:#FF590F">ISSN 2505-8821</span></p>
+						</div>
+						<div class="ofr">
+							<p><span cl>IIARD INTERNATIONAL JOURNAL OF GEOGRAPHY AND ENVIRONMENTAL MANAGEMENT</span></p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="product-grids product-grids-mdl simpleCart_shelfItem wow fadeInUp animated" data-wow-delay=".7s">
 				<div class="new-top">
 						<a href="journal/?j=IJASMT"><img src="get/IJAM.jpg" class="img-responsive" alt=""/></a>
 						<div class="new-text">
@@ -246,7 +283,6 @@ function doesConnectionExist() {
                 
                 </div>
                 
-                
                 <div class="product-grids simpleCart_shelfItem wow fadeInUp animated" data-wow-delay=".9s">
 					<div class="new-top">
 						<a href="journal/?j=IJAES"><img src="get/IJAES.jpg" class="img-responsive" alt=""/></a>
@@ -268,79 +304,6 @@ function doesConnectionExist() {
 						</div>
 					</div>
 				
-				</div>
-				
-				<div class="product-grids simpleCart_shelfItem wow fadeInUp animated" data-wow-delay=".5s">
-					<div class="new-top">
-						<a href="journal/?j=IJHPR"><img src="get/IJHP.jpg"  class="img-responsive" alt=""/></a>
-                        <!-- <span class="star"> </span>-->
-						<div class="new-text">
-							<ul>
-								<li><a href="journal/?j=IJHPR">View Details </a></li>
-								
-								
-							</ul>
-						</div>
-					</div>
-					<div class="new-bottom">
-						<h5><a href="journal/?j=IJHPR">IJHPR</a></h5>
-						<div class="rating">
-							<p><span style=" text-align:right; color:#FF590F">ISSN 2545-5737</span></p>
-						</div>
-						<div class="ofr">
-							<p><span cl>INTERNATIONAL JOURNAL OF HEALTH AND PHARMACEUTICAL RESEARCH</span></p>
-						</div>
-					</div>
-				</div>
-				
-
-
-				
-				
-
-
-<div class="product-grids product-grids-mdl simpleCart_shelfItem wow fadeInUp animated" data-wow-delay=".7s">
-					<div class="new-top">
-						<a href="journal/?j=ijebm"><img src="get/IJEB.jpg" class="img-responsive" alt=""/></a>
-						<div class="new-text">
-							<ul>
-								<li><a href="journal/?j=ijebm">View Details </a></li>
-								
-								
-							</ul>
-						</div>
-					</div>
-					<div class="new-bottom">
-						<h5><a href="journal/?j=IJEBM">IJEBM</a></h5>
-						<div class="rating">
-							<p><span style=" text-align:right; color:#FF590F">ISSN 2489-0065</span></p>
-						</div>
-						<div class="ofr">
-							<p><span cl>IIARD INTERNATIONAL JOURNAL OF ECONOMICS AND BUSINESS MANAGEMENT</span></p>
-						</div>
-					</div>
-				  </div>
-                
-                <div class="product-grids simpleCart_shelfItem wow fadeInUp animated" data-wow-delay=".5s">
-					<div class="new-top">
-						<a href="journal/?j=IJGEM"><img src="get/IJGEM.jpg" class="img-responsive" alt=""/></a>
-						<div class="new-text">
-							<ul>
-								<li><a href="journal/?j=IJGEM">View Details </a></li>
-								
-								
-							</ul>
-						</div>
-					</div>
-					<div class="new-bottom">
-						<h5><a href="journal/?j=IJGEM">IJGEM</a></h5>
-						<div class="rating">
-							<p><span style=" text-align:right; color:#FF590F">ISSN 2505-8821</span></p>
-						</div>
-						<div class="ofr">
-							<p style="font-size:14px;"><span cl>IIARD INTERNATIONAL JOURNAL OF GEOGRAPHY AND ENVIRONMENTAL MANAGEMENT</span></p>
-						</div>
-					</div>
 				</div>
                 
 				
@@ -1182,7 +1145,7 @@ function doesConnectionExist() {
                   
                   
                   <h4> Articles Under Review</h4>
-                  <p style="margin-top: -15px;"><span class="badge badge-danger">March 2017 Edition</span></p>
+                  <p style="margin-top: -15px;"><span class="badge badge-danger">September 2017 Edition</span></p>
                   <br>
                   
 				  
@@ -1199,7 +1162,6 @@ function doesConnectionExist() {
 										</div>
 										
 						</div>
-						
 <!--
 						<a href="home/" class="list-group-item"><i class="ti ti-email"></i>Home </a> 
 						<a href="faq/" class="list-group-item"><i class="ti ti-eye"></i>FAQ</a> 
@@ -1212,122 +1174,23 @@ function doesConnectionExist() {
 -->	
 				  </div>			 
 				</div>
-				<div class="gallery-grid">
-					  <div class='marquee' style="height: 300px;">
-										
-										
-					<h5 style=" color:#FF590F"> CALL FOR PAPERS </h5>
-					<p><span>Research Articles written in English are invited from interested scholars and researchers in the academic community and other establishment for publication. Authors who wish to submit manuscripts should note that the manuscripts has not been submitted elsewhere nor is it for consideration in another journal. The article should be the original work of the author. IIARD welcomes and acknowledges high quality theoretical and empirical original research papers, case studies, review papers, literature reviews, book reviews, conceptual framework, analytical and simulation models, technical note from researchers, academicians, professionals, practitioners and students from all over the world for publication in the following Journals:</span></p> 
-					<hr class="bs-docs-separator wow fadeInDown animated" data-wow-delay=".5s">
+				<div class="gallery-grid ">
+					<h6></h6>
+					<a href="journals/"><img src="images/b1.png" class="img-responsive" alt=""/></a>
+					<div class="gallery-text simpleCart_shelfItem">
+						<h5><a class="name" >IIARD PUBLICATIONS</a></h5>
+						<p><span class="item_price"></span></p>
 						
-				   
-					   <h5 style=" color:#FF590F">Social Sciences and Education</h5>
-						
-							  <a href="journal/?j=JPSLR">&#9679; Journal of Political Science and Leadership Research</a>
-							  <p><a href="journal/?j=IJEE">&#9679; International Journal of Education and Evaluation</a></p>
-							  <p><a href="journal/?j=IJSSMR">&#9679; International Journal of Social Sciences and Management Research</a></p>
-							  <p><a href="journal/?j=JPASWR">&#9679; Journal of Public Administration and Social Welfare Research</a></p>
-							  <p><a href="journal/?j=RJMCIT">&#9679; Research Journal of Mass Communication and Information Technology</a></p>
-					
-					<hr class="bs-docs-separator wow fadeInDown animated" data-wow-delay=".5s">
-					
-
-					
-					<h5 style=" color:#FF590F">Sciences</h5>
-						
-							   <p><a href="journal/?j=IJGEM">&#9679; IIARD International Journal of Geography and Environmental Management </a></p>
-								<p><a href="journal/?j=IJAES">&#9679; International Journal of Agriculture and Earth Science</a></p>
-							   <p><a href="journal/?j=IJASMT">&#9679; International Journal of Applied Science and Mathematical Theory</a></p>
-							   <p><a href="journal/?j=IJCCP">&#9679; International Journal of Chemistry and Chemical Processes</a></p>
-							   <p><a href="journal/?j=IJCSMT">&#9679; International Journal of Computer Science and Mathematical Theory,</a>
-							   <p><a href="journal/?j=IJHPR">&#9679;  International Journal of Health and Pharmaceutical Research</a></p>
-							   <p><a href="journal/?j=IJMEPR">&#9679; International Journal of Medical Evaluation and Physical Report</a></p>
-								<p><a href="journal/?j=JBGR">&#9679; Journal of Biology and Genetic Research</a></p>
-								   <p><a href="journal/?j=RJFSQC">&#9679; Research Journal of Food Science and Quality Control</a></p>
-								<p><a href="journal/?j=RJPST">&#9679; Research Journal of Pure Science and Technology</a></p>
-								<p><a href="journal/?j=WJIMT">&#9679; World Journal of Innovation and Modern Technology</a></p>
+						<ul>
+							<li><a href="#"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></li>
 							
-					<hr class="bs-docs-separator wow fadeInDown animated" data-wow-delay=".5s">
-
-
-
-					<h5 style=" color:#FF590F">Humanities</h5>
-						
-							  <p><a href="journal/?j=AJHA">&#9679; African Journal of History and Archaeology</a>
-				  			  <p><a href="journal/?j=IJELCS">&#9679; International Journal of English Language and Communication Studies</a>
-							  <p><a href="journal/?j=IJRCP">&#9679; International Journal of Religious and Cultural Practice</a>
-							  <p><a href="journal/?j=JHSP">&#9679; Journal of Humanities and Social Policy</a>
-							  <p><a href="journal/?j=JLGP">&#9679; Journal of Law and Global Policy</a>
-							  <p><a href="journal/?j=JHMTR">&#9679; Journal of Hotel Management and Tourism Research</a>
-							  <p><a href="journal/?j=RJHCS">&#9679; Research Journal of Humanities and Cultural Studies</a>
-							
-					<hr class="bs-docs-separator wow fadeInDown animated" data-wow-delay=".5s">
-
-
-
-					<h5 style=" color:#FF590F">Engineering</h5>
-						
-							<p><a href="journal/?j=IJEMT">&#9679; International Journal of Engineering and Modern Technology</a></p>
-							
-			<hr class="bs-docs-separator wow fadeInDown animated" data-wow-delay=".5s">
-
-
-
-					<h5 style=" color:#FF590F">Management Sciences</h5>
-						
-							  <p><a href="journal/?j=IJBFR">&#9679; IIARD International Journal of Banking and Finance Research</a></p>
-			   			  	  <p><a href="journal/?j=IJEBM">&#9679; IIARD International Journal of Economics and Business Management</a></p>
-				   			  <p><a href="journal/?j=IJEFM">&#9679; International Journal of Economics and Financial Management</a></p>
-				   			  <p><a href="journal/?j=IJSSMR">&#9679; International Journal of Social Sciences and Management Research</a></p>
-							  <p><a href="journal/?j=IJMCS">&#9679; International Journal of Marketing and Communication Studies</a></p>
-								<p><a href="journal/?j=JAFM">&#9679; Journal of Accounting and Financial Management</a></p>
-								<p><a href="journal/?j=JBAE">&#9679; Journal of Business and African Economy</a></p>
-								<p><a href="journal/?j=WJEDS">&#9679; World Journal of Entrepreneurial Development Studies</a></p>
-								<p><a href="journal/?j=WJFIR">&#9679; World Journal of Finance and Investment Research</a></p>
-									
+							<li><a href="#"><span class="glyphicon glyphicon glyphicon-heart-empty" aria-hidden="true"></span></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
-           
-<script>
-  $(function(){
-    $('.marquee').marquee();   
-  });
-</script>
-           
-<script>
-	
-$(function(){
-  $('.marquee').marquee({
-  //If you wish to always animate using jQuery
-  allowCss3Support: true,
-  //works when allowCss3Support is set to true - for full list see http://www.w3.org/TR/2013/WD-css3-transitions-20131119/#transition-timing-function
-  css3easing: 'linear',
- 
-  //requires jQuery easing plugin. Default is 'linear'
-  easing: 'linear',
-  //pause time before the next animation turn in milliseconds
-  delayBeforeStart: 1000,
-  //'left', 'right', 'up' or 'down'
-  direction: 'up',
-  //true or false - should the marquee be duplicated to show an effect of continues flow
-  duplicated: false,
-  //speed in milliseconds of the marquee in milliseconds
-  duration: 30000,
-  //gap in pixels between the tickers
-  gap: 20,
- 
-  //on cycle pause the marquee
-  pauseOnCycle: false,
- 
-  //on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
-  pauseOnHover: true,
-  //the marquee is visible initially positioned next to the border towards it will be moving
-  startVisible: false
-  });
-});
-</script>
+            
             
             
 		</div>
@@ -1340,7 +1203,7 @@ $(function(){
         
 			<div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
 				<h3 class="title">Recent<span> Publications</span></h3>
-                <h3 class="hdg">March 2017</h3>
+                <h3 class="hdg">AUGUST 2017</h3>
 				<p>To view all journals click <a href="journals/">here</a> </p>
                 
 			</div>
@@ -1365,7 +1228,7 @@ $(function(){
                         <li role="presentation"><a href="#profile13" role="tab" id="profile-tab13" data-toggle="tab" aria-controls="profile13">IJRCP</a></li>
                         <li role="presentation"><a href="#profile14" role="tab" id="profile-tab14" data-toggle="tab" aria-controls="profile14">IJBFR</a></li>
                         
-					<!--dri=opdown headers-->
+					<!--dropdown headers-->
                     <li role="presentation" class="dropdown">
 							<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">More<span class="caret"></span></a>
 							<ul class="dropdown-menu scroll-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
@@ -1798,61 +1661,7 @@ $(function(){
     <!--//footer-->		
 	<!--search jQuery-->
    
-     <!--FlexSlider-->
-
-<script type="text/javascript">
-	// set the date we're counting down to
-var target_date = new Date('Feb, 1, 2017').getTime();
- 
-// variables for time units
-var days, hours, minutes, seconds;
- 
-// get tag element
-var countdown = document.getElementById('countdown');
- 
-// update the tag with id "countdown" every 1 second
-setInterval(function () {
- 
-    // find the amount of "seconds" between now and target
-    var current_date = new Date().getTime();
-    var seconds_left = (target_date - current_date) / 1000;
- 
-    // do some time calculations
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
-     
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
-     
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
-     
-    // format countdown string + set tag value
-    countdown.innerHTML = '<span class="days">' + days +  ' <b>Days</b></span> <span class="hours">' + hours + ' <b>Hours</b></span> <span class="minutes">'
-    + minutes + ' <b>Minutes</b></span> <span class="seconds">' + seconds + ' <b>Seconds</b></span>';  
-	
-	
- 
-}, 1000);
-</script>
-                            
-<!--
-					<script defer src="js/jquery.flexslider.js"></script>
-					<script type="text/javascript">
-						$(window).load(function(){
-						  $('.flexslider').flexslider({
-							smoothHeight: true,
-							touch: true,
-							controlNav: false,
-							animation: "pagination",
-							start: function(slider){
-							  $('body').removeClass('loading');
-							}
-						  });
-						});
-					</script>
--->
-					<!--End-slider-script-->
+   
 	<script src="js/main.js"></script>
 	<!--//search jQuery-->
 	<!--smooth-scrolling-of-move-up-->
