@@ -258,6 +258,7 @@ ul.dropdown-menu.multi-column {
     display: inline-block;
 	position: inherit;
 }
+
 .navbar-default .navbar-nav > li > a {
     color: #33414e;
     
@@ -1121,6 +1122,8 @@ span.star{
 .product-grids {
     float: left;
     width: 31%;
+	height: 100%;
+    max-height: 23px;
     overflow: hidden;
 	-webkit-box-shadow: 0px 0px 6px 1px #DEDEDE;
     -moz-box-shadow: 0px 0px 6px 1px #DEDEDE;

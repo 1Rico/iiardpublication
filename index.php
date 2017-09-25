@@ -187,7 +187,7 @@ $stmt32->execute();
 							<p><span style=" text-align:right; color:#FF590F">ISSN 2406-8934</span></p>
 						</div>
 						<div class="ofr">
-							<p><span cl>IIARD INTERNATIONAL JOURNAL OF BANKING AND FINANCE RESEARCH</span></p>
+							<p><span cl>IIARD INTERNATIONAL JOURNAL OF BANKING AND FINANCE RESEARCH BABA BABA BABAB BABABA BABA</span></p>
 						</div>
 					</div>
 				</div>
