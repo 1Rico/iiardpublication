@@ -44,47 +44,47 @@ $stmtv1->execute();
 $pathv1="get/".$j."/VOL 1/";
 $row_v1=$stmtv1->rowCount();
 
-$stmtv21 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 1%'");
+$stmtv21 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 1 2016'");
 $stmtv21->execute();
 $pathv21 = "get/".$j."/VOL. 2 NO. 1 2016/";
 $row_v21=$stmtv21->rowCount();
 
-$stmtv22 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 2 %'");
+$stmtv22 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 2 2016'");
 $stmtv22->execute();
 $pathv22 = "get/".$j."/VOL. 2 NO. 2 2016/";
 $row_v22=$stmtv22->rowCount();
 
-$stmtv23 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 3 %'");
+$stmtv23 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 3 2016'");
 $stmtv23->execute();
 $pathv23 = "get/".$j."/VOL. 2 NO. 3 2016/";
 $row_v23=$stmtv23->rowCount();
 
-$stmtv24 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 4 %'");
+$stmtv24 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 4 2016'");
 $stmtv24->execute();
 $pathv24 = "get/".$j."/VOL. 2 NO. 4 2016/";
 $row_v24=$stmtv24->rowCount();
 
-$stmtv25 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 5 %'");
+$stmtv25 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 5 2016'");
 $stmtv25->execute();
 $pathv25 = "get/".$j."/VOL. 2 NO. 5 2016/";
 $row_v25=$stmtv25->rowCount();
 
-$stmtv26 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 6 %'");
+$stmtv26 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 6 2016'");
 $stmtv26->execute();
 $pathv26 = "get/".$j."/VOL. 2 NO. 6 2016/";
 $row_v26=$stmtv26->rowCount();
 
-$stmtv27 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 7 %'");
+$stmtv27 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 7 2016'");
 $stmtv27->execute();
 $pathv27 = "get/".$j."/VOL. 2 NO. 7 2016/";
 $row_v27=$stmtv27->rowCount();
 
-$stmtv28 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 8 %'");
+$stmtv28 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 8 2016'");
 $stmtv28->execute();
 $pathv28 = "get/".$j."/VOL. 2 NO. 8 2016/";
 $row_v28=$stmtv28->rowCount();
 
-$stmtv29 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 9 %'");
+$stmtv29 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 2 NO. 9 2016'");
 $stmtv29->execute();
 $pathv29 = "get/".$j."/VOL. 2 NO. 9 2016/";
 $row_v29=$stmtv29->rowCount();
@@ -168,6 +168,19 @@ $stmt3->execute();
 <script src="js/modernizr.custom.js"></script>
 <!--//js-->
 
+<!--flex slider-->
+<!--<script defer src="/js/jquery.flexslider.js"></script>
+<link rel="stylesheet" href="css/flexslider1.css" type="text/css" media="screen" />
+<script>
+// Can also be used with $(document).ready()
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    controlNav: "thumbnails"
+  });
+});-->
+
+
 </script>
 
 <!--cart-->
@@ -232,6 +245,14 @@ $stmt3->execute();
                     <div class="col-md-6 single-top wow fadeInLeft animated" data-wow-delay=".5s">
                     
 					
+						<!--<ul class="slides">
+							<li data-thumb="<?php//echo $row['path']; ?>">
+								<div class="thumb-image"> <img src="<?php// echo $row['path']; ?>"  class="img-responsive" alt=""> </div>
+							</li>
+							<li data-thumb="<?php//echo $row['path']; ?>">
+								 <div class="thumb-image"> <img src="<?php// echo $row['path']; ?>"  class="img-responsive" alt=""> </div>
+							</li> 
+						</ul>-->
                         <img src="<?php echo $row['path']; ?>"  class="img-responsive" alt="<?php echo $row['journal_name']; ?>">
                        <?php if($row['journal'] != "OLD"){?>
                         <span class="star"> </span>	
@@ -309,7 +330,7 @@ overflow-y: scroll;
                     
 				<?php
                 if($row_v1 >0 ){
-				//vol1?>
+				if(file_exists($pathv1)){//vol1?>
                 <li class="item1 "><a href="#" class="list-group-item">VOL 1<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -319,13 +340,13 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } else {?>
+				</li><?php } } else {?>
 				<li class="item1 "><a href="#" class="list-group-item"><span class="icon"> </span></a></li>
 				<?php } ?>
                 
              <?php 
 			 if($row_v21 >0 ){
-				 //if(file_exists($pathv21)){//vol2n1?>
+				 if(file_exists($pathv21)){//vol2n1?>
                 <li class="item2 "><a href="#" class="list-group-item">VOL. 2 N0. 1<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -335,11 +356,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } ?>
+				</li><?php } } ?>
                 
                 <?php 
 				if($row_v22 >0 ){
-					//if(file_exists($pathv22)){//vol2n2?>
+					if(file_exists($pathv22)){//vol2n2?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 2 N0. 2<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -349,11 +370,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php  } ?>
+				</li><?php } } ?>
                 
                 <?php
 				 if($row_v23 >0 ){
-					//if(file_exists($pathv23)){//vol2n3?>
+					if(file_exists($pathv23)){//vol2n3?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 2 N0. 3<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -363,11 +384,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } ?>
+				</li><?php } } ?>
                 
                 <?php 
 				if($row_v24 >0 ){
-					//if(file_exists($pathv24)){//vol2n4?>
+					if(file_exists($pathv24)){//vol2n4?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 2 N0. 4<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -377,11 +398,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php }  ?>
+				</li><?php } } ?>
                 
                 <?php 
 				if($row_v25 >0 ){
-					//if(file_exists($pathv25)){//vol2n5?>
+					if(file_exists($pathv25)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 2 N0. 5<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -391,11 +412,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php }  ?>
+				</li><?php } } ?>
                 
                 <?php 
 				if($row_v26 >0 ){
-					//if(file_exists($pathv26)){//vol2n5?>
+					if(file_exists($pathv26)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 2 N0. 6<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -405,11 +426,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } ?>
+				</li><?php } } ?>
                 
                 <?php 
 				if($row_v27 >0 ){
-					//if(file_exists($pathv27)){//vol2n5?>
+					if(file_exists($pathv27)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 2 N0. 7<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -419,11 +440,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } ?>
+				</li><?php } } ?>
                
                 <?php 
 				if($row_v28 >0 ){
-					//if(file_exists($pathv28)){//vol2n5?>
+					if(file_exists($pathv28)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 2 N0. 8<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -433,11 +454,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } ?>
+				</li><?php } } ?>
                
                <?php 
 				if($row_v29 >0 ){
-					//if(file_exists($pathv29)){//vol2n5?>
+					if(file_exists($pathv29)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 2 N0. 9<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -447,11 +468,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } ?>
+				</li><?php } } ?>
                
                <?php 
 				if($row_v31 >0 ){
-					//if(file_exists($pathv31)){//vol2n5?>
+					if(file_exists($pathv31)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 1<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -461,12 +482,12 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } ?>
+				</li><?php } } ?>
 
                 
                 <?php 
 				if($row_v32 >0 ){
-					//if(file_exists($pathv32)){//vol2n5?>
+					if(file_exists($pathv32)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 2<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -476,11 +497,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } ?>
+				</li><?php } } ?>
 
                 <?php 
 				if($row_v33 >0 ){
-					//if(file_exists($pathv33)){//vol2n5?>
+					if(file_exists($pathv33)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 3<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -490,11 +511,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } ?>
+				</li><?php } } ?>
 
                 <?php 
 				if($row_v34 >0 ){
-					//if(file_exists($pathv34)){//vol2n5?>
+					if(file_exists($pathv34)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 4<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -504,11 +525,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } ?>
+				</li><?php } } ?>
                
                <?php 
 				if($row_v35 >0 ){
-					//if(file_exists($pathv35)){//vol2n5?>
+					if(file_exists($pathv35)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 5<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -518,11 +539,11 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php } ?>
+				</li><?php } } ?>
                 
                 <?php 
 				if($row_v36 >0 ){
-					//if(file_exists($pathv36)){//vol2n5?>
+					if(file_exists($pathv36)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 6<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -532,7 +553,7 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php }  ?>
+				</li><?php } } ?>
                 
                 <?php 
 				if($row_v37 >0 ){
@@ -542,7 +563,7 @@ overflow-y: scroll;
                  <?php
 				 while($rowv37 = $stmtv37->fetch(PDO::FETCH_ASSOC)){
 					?>
-						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv37['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv37['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv37['pub_author']; ?></p> </li>
+						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv38['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv38['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv38['pub_author']; ?></p> </li>
                                   <?php } ?>
                         										
 					</ul>

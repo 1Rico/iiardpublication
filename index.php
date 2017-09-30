@@ -136,10 +136,8 @@ $stmt32->execute();
 <!--//Custom Theme files -->
 <!--js-->
 <script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
 <!--//js-->
 <!--cart-->
-<script src="js/simpleCart.min.js"></script>
 <!--cart-->
 <!--web-fonts-->
 <link href='//fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -187,7 +185,7 @@ $stmt32->execute();
 							<p><span style=" text-align:right; color:#FF590F">ISSN 2406-8934</span></p>
 						</div>
 						<div class="ofr">
-							<p><span cl>IIARD INTERNATIONAL JOURNAL OF BANKING AND FINANCE RESEARCH BABA BABA BABAB BABABA BABA</span></p>
+							<p><span cl>IIARD INTERNATIONAL JOURNAL OF BANKING AND FINANCE RESEARCH</span></p>
 						</div>
 					</div>
 				</div>
@@ -1664,8 +1662,6 @@ $stmt32->execute();
    
 	<script src="js/main.js"></script>
 	<!--//search jQuery-->
-	<!--smooth-scrolling-of-move-up-->
-	<script src = "jss/jquery.mousewheel.js"></script>
 		
 		<!-- iosSlider plugin -->
 	<script src = "jss/jquery.iosslider-vertical.js"></script>
