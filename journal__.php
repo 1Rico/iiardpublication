@@ -124,7 +124,7 @@ $stmtv37->execute();
 $pathv37 = "get/".$j."/VOL. 3 NO. 7 2017/";
 $row_v37=$stmtv37->rowCount();
 	
-$stmtv38 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 3 NO. 8%'");
+$stmtv38 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 3 NO. 8 2017'");
 $stmtv38->execute();
 $pathv38 = "get/".$j."/VOL. 3 NO. 8 2017/";
 $row_v38=$stmtv38->rowCount();
@@ -133,51 +133,6 @@ $stmtv39 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND
 $stmtv39->execute();
 $pathv39 = "get/".$j."/VOL. 3 NO. 9 2017/";
 $row_v39=$stmtv39->rowCount();
-
-$stmtv310 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 3 NO. 10 2017'");
-$stmtv310->execute();
-$pathv310 = "get/".$j."/VOL. 3 NO. 10 2017/";
-$row_v310=$stmtv310->rowCount();
-
-$stmtv311 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 3 NO. 11 2017'");
-$stmtv311->execute();
-$pathv311 = "get/".$j."/VOL. 3 NO. 11 2017/";
-$row_v311=$stmtv311->rowCount();
-
-$stmtv312 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 3 NO. 12 2017'");
-$stmtv312->execute();
-$pathv312 = "get/".$j."/VOL. 3 NO. 12 2017/";
-$row_v312 =$stmtv312->rowCount();
-
-$stmtv313 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 3 NO. 13 2017'");
-$stmtv313->execute();
-$pathv313 = "get/".$j."/VOL. 3 NO. 13 2017/";
-$row_v313 = $stmtv313->rowCount();
-
-$stmtv41 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 4 NO. 1%'"); 
-$stmtv41->execute();
-$pathv41 = "get/".$j."/VOL. 4 NO. 1 2018/";
-$row_v41 = $stmtv41->rowCount();
-
-$stmtv42 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 4 NO. 2 2018'");
-$stmtv42->execute();
-$pathv42 = "get/".$j."/VOL. 4 NO. 2 2018/";
-$row_v42 = $stmtv42->rowCount();
-
-$stmtv43 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 4 NO. 3 2018'");
-$stmtv43->execute();
-$pathv43 = "get/".$j."/VOL. 4 NO. 3 2018/";
-$row_v43 = $stmtv43->rowCount();
-
-$stmtv44 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 4 NO. 4 2018'");
-$stmtv44->execute();
-$pathv44 = "get/".$j."/VOL. 4 NO. 4 2018/";
-$row_v44 = $stmtv44->rowCount();
-
-$stmtv45 = $db->prepare("SELECT * FROM publications WHERE pub_journal = '$j' AND pub_issue = 'BACK' AND pub_volume LIKE 'VOL. 4 NO. 5 2018'");
-$stmtv45->execute();
-$pathv45 = "get/".$j."/VOL. 4 NO. 5 2018/";
-$row_v45 = $stmtv45->rowCount();
 	
 
 /*//get number of items in BACK
@@ -386,7 +341,6 @@ overflow-y: scroll;
                         										
 					</ul>
 				</li><?php } ?>
-				
                 
                 <?php 
 				if($row_v22 >0 ){
@@ -401,8 +355,6 @@ overflow-y: scroll;
                         										
 					</ul>
 				</li><?php  } ?>
-
-				
                 
                 <?php
 				 if($row_v23 >0 ){
@@ -589,7 +541,7 @@ overflow-y: scroll;
                 
                 <?php 
 				if($row_v37 >0 ){
-					// if(file_exists($pathv37)){//vol2n5?>
+					if(file_exists($pathv37)){//vol2n5?>
                 <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 7<span class="icon"> </span></a>
 					<ul>
                  <?php
@@ -627,137 +579,7 @@ overflow-y: scroll;
                                   <?php } ?>
                         										
 					</ul>
-				</li><?php }?>
-				
-				<?php 
-				if($row_v310 >0 ){
-					//if(file_exists($pathv310)){//vol2n5?>
-                <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 10<span class="icon"> </span></a>
-					<ul>
-                 <?php
-				 while($rowv310 = $stmtv310->fetch(PDO::FETCH_ASSOC)){
-					?>
-						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv310['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv310['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv310['pub_author']; ?></p> </li>
-                                  <?php } ?>
-                        										
-					</ul>
-				</li><?php } ?>
-				
-				<?php 
-				if($row_v311 >0 ){
-					//if(file_exists($pathv310)){//vol2n5?>
-                <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 11<span class="icon"> </span></a>
-					<ul>
-                 <?php
-				 while($rowv311 = $stmtv311->fetch(PDO::FETCH_ASSOC)){
-					?>
-						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv311['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv311['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv311['pub_author']; ?></p> </li>
-                                  <?php } ?>
-                        										
-					</ul>
-				</li><?php } ?>
-				
-				<?php 
-				if($row_v312 >0 ){
-					//if(file_exists($pathv310)){//vol2n5?>
-                <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 12<span class="icon"> </span></a>
-					<ul>
-                 <?php
-				 while($rowv312 = $stmtv312->fetch(PDO::FETCH_ASSOC)){
-					?>
-						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv312['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv312['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv312['pub_author']; ?></p> </li>
-                                  <?php } ?>
-                        										
-					</ul>
-				</li><?php } ?>
-				
-				<?php 
-				if($row_v313 >0 ){
-					//if(file_exists($pathv310)){//vol2n5?>
-                <li class="item "><a href="#" class="list-group-item">VOL. 3 N0. 13<span class="icon"> </span></a>
-					<ul>
-                 <?php
-				 while($rowv313 = $stmtv313->fetch(PDO::FETCH_ASSOC)){
-					?>
-						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv313['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv313['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv313['pub_author']; ?></p> </li>
-                                  <?php } ?>
-                        										
-					</ul>
-				</li><?php } ?>
-
-<?php 
-				if($row_v41 >0 ){
-					//if(file_exists($pathv41)){//vol2n5?>
-                <li class="item "><a href="#" class="list-group-item">VOL. 4 N0. 1<span class="icon"> </span></a>
-					<ul>
-                 <?php
-				 while($rowv41 = $stmtv41->fetch(PDO::FETCH_ASSOC)){
-					?>
-						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv41['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv41['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv41['pub_author']; ?></p> </li>
-                                  <?php } ?>
-                        										
-					</ul>
-				</li> 
-				 <?php } ?>
-<?php 
-				if($row_v42 >0 ){
-					//if(file_exists($pathv42)){//vol2n5?>
-                <li class="item "><a href="#" class="list-group-item">VOL. 4 N0. 2<span class="icon"> </span></a>
-					<ul>
-                 <?php
-				 while($rowv42 = $stmtv42->fetch(PDO::FETCH_ASSOC)){
-					?>
-						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv42['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv42['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv42['pub_author']; ?></p> </li>
-                                  <?php } ?>
-                        										
-					</ul>
-				</li><?php }
-
-if($row_v43 >0 ){
-					//if(file_exists($pathv43)){//vol2n5?>
-                <li class="item "><a href="#" class="list-group-item">VOL. 4 N0. 3<span class="icon"> </span></a>
-					<ul>
-                 <?php
-				 while($rowv43 = $stmtv43->fetch(PDO::FETCH_ASSOC)){
-					?>
-						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv43['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv43['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv43['pub_author']; ?></p> </li>
-                                  <?php } ?>
-                        										
-					</ul>
-				</li><?php }
-
-if($row_v44 >0 ){
-					//if(file_exists($pathv44)){//vol2n5?>
-                <li class="item "><a href="#" class="list-group-item">VOL. 4 N0. 4<span class="icon"> </span></a>
-					<ul>
-                 <?php
-				 while($rowv44 = $stmtv44->fetch(PDO::FETCH_ASSOC)){
-					?>
-						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv44['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv44['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv44['pub_author']; ?></p> </li>
-                                  <?php } ?>
-                        										
-					</ul>
-				</li><?php }
-
-if($row_v45 >0 ){
-					//if(file_exists($pathv45)){//vol2n5?>
-                <li class="item "><a href="#" class="list-group-item">VOL. 4 N0. 5<span class="icon"> </span></a>
-					<ul>
-                 <?php
-				 while($rowv45 = $stmtv45->fetch(PDO::FETCH_ASSOC)){
-					?>
-						<li class="list-group-item"><a class="items" style="color:#337ab7;"  href="<?php echo $rowv45['path']; ?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span><?php echo $rowv45['pub_name']; ?></a> <p style="color:#FF590F;"> Author(s): <?php echo $rowv45['pub_author']; ?></p> </li>
-                                  <?php } ?>
-                        										
-					</ul>
-				</li><?php }
-
- ?>
-				
-				
-				
-				
-				
+				</li><?php } }?>
                 
 				<!--<li class="item2 wow fadeInDown animated" data-wow-delay=".5s"><a href="#">The standard Lorem Ipsum passage Etiam faucibus viverra libero vel efficitur. Ut semper nisl ut laoreet ultrices ?<span class="icon"> </span></a>
 					<ul>

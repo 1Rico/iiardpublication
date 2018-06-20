@@ -143,7 +143,7 @@ require_once( "inc/search.php" );
 					<tbody>
 
 						<tr>
-							<td><p style="color: #FF590F">FOR FOREIGN AUTHORS</p>
+							<td><p style="color: #FF590F">For Foreign Authors</p>
 								<h1>Secure Online Payment</h1>
 								<p>We accept only Visa Cards at the moment</p>
 								<p>&nbsp;</p>
@@ -174,31 +174,24 @@ require_once( "inc/search.php" );
 											document.form1.ap_itemcode.value = "i4";
 											document.form1.ap_amount.value = "40";
 											document.form1.ap_description.value = "Payment For Article";
-										} else if ( item == "Enter Amount" ) {
-											document.form1.ap_itemcode.value = "i5";
-											document.form1.ap_amount.value = document.getElementById("pay_amount").value;
-											document.form1.ap_description.value = "Payment For Article";
 										}
 									}
 								</script>
 
-								<form action="https://secure.payza.eu/checkout" method="post" name="form1">
+								<form action="https://secure.payza.com/checkout" method="post" name="form1">
 									<label>Please Select Your payment Option</label>
-									<select id="sel" name="ap_itemname" class="form-control" onchange="togglePayAmount()">
+									<select id="sel" name="ap_itemname" class="form-control">
 										<option id="3" value="Online and Print Article">USD 70.00 - Online and Print Article</option>
 										<option id="1" value="One Article Online Only">USD 50.00 - One Article Online Only</option>
 										<option id="4" value="Payment For Article">USD 40.00 - Payment For Article</option>
 										<option id="2" value="One Hard Copy Only">USD 20.00 - One Hard Copy Only</option>
-										<option id="pay_amount_option" value="Enter Amount">Enter Amount</option>
+
 									</select>
-
-									<br>
-									<input type=number placeholder="Enter amount in USD" class="form-control" name="pay_amount" id="pay_amount">
 									<br>
 
-									<input name="ap_amount" id="ap_amount" type="hidden"/>
-									<input name="ap_description" id="ap_description" type="hidden"/>
-									<input name="ap_itemcode" id="ap_itemcode" type="hidden"/>
+									<input name="ap_amount" type="hidden"/>
+									<input name="ap_description" type="hidden"/>
+									<input name="ap_itemcode" type="hidden"/>
 									<input name="ap_purchasetype" type="hidden" value="item-goods"/>
 									<input name="ap_merchant" type="hidden" value="billing@iiardpub.org"/>
 									<input type="hidden" name="ap_additionalcharges" value="5.50"/>
@@ -227,7 +220,9 @@ require_once( "inc/search.php" );
 						<tr>
 							<td>
 							
-								<p style="color: #FF590F">FOR NIGERIAN AUTHORS</p>
+<!--								<p style="color: #FF590F">For Local Authors</p>-->
+								<h3>For Local Authors</h2>
+								<p>Good news to  Nigerian authors! We are pleased to inform you that our publication fee has been reduced from <code>NGN 22,000</code> to</p>
 								<br>
 								<ul style="list-style: none"> 
 							  <li><code>NGN 18,000</code> (online and print 2 hard copies) or </li> 
@@ -302,15 +297,6 @@ require_once( "inc/search.php" );
 	<!--smooth-scrolling-of-move-up-->
 <script>
 
-function togglePayAmount(){
-	var option = $("#sel").find('option:selected').attr("id");
-	if (option === "pay_amount_option"){
-		$("#pay_amount").fadeIn(500);
-		return;
-	}
-	$("#pay_amount").fadeOut(500);
-}
-
 function getPrice(selectObject) {
 	$("#loader").show();
   $("#BTC").fadeOut(500);
@@ -336,7 +322,6 @@ function getPrice(selectObject) {
 </script>
 	<script type="text/javascript">
 		$( document ).ready( function () {
-			$("#pay_amount").hide();
 			$("#loader").hide();
 			$("#BTC").hide();
 			var defaults = {

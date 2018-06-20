@@ -95,15 +95,16 @@
 <?php } ?>
 	</div>
 	
-<!-- marquee notification
+<!--
+ marquee notification
 <script src="js/jquery.liMarquee.js"></script>
 	<script>
 		$(window).load(function() { 
 	$('.demo').liMarquee({
 		scrolldelay: 50000,	
-				
-			circular: true
+		circular: true
 	});
 
 		})
-</script>-->
+</script>
+-->

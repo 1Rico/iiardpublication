@@ -10,7 +10,7 @@ if (isset($_GET['pg'])){
 }
 
 
-$month = "SEPTEMBER";
+$month = "OCTOBER";
 $stmt_review = $db->prepare("SELECT * FROM reviews WHERE month = :month");
 $stmt_review->bindParam(':month', $month, PDO::PARAM_STR);
 $stmt_review->execute();
@@ -150,7 +150,6 @@ $stmt32->execute();
 <link href="css/animate.min.css" rel="stylesheet"> 
 
 <?php include_once("inc/marquee.php"); ?>
-
 </head>
 <body>
 
@@ -1047,14 +1046,15 @@ $stmt32->execute();
             
 			<!--End of all conditions-->
             <div class="col-md-3 rsidebar">
-				<div class="rsidebar-top">
+            <div class="rsidebar-top">
+            <div class="sidebar-row" style="margin-top: 0px;">
+					<h4 style="text-align: center;">Latest News Updates</h4>
 			  <div class="sidebar-row">
-                  <h4>Latest NEWS</h4>
-                  <div style=" height: 100px; overflow: hidden;" class="date">
+                  <div style=" height: 150px; overflow: hidden;" class="date">
 										<div id="news"> 
 											<div class="date-text">
-											<h5 style="text-align: left"><span class="badge badge-primary"></span> NAME</h5>
-												<p><span style=" text-align: justify; color:#FF590F"><em> AUTHOR</em></span></p> 
+											<h5 style="font-size: 16px;">Good news to  Nigerian authors!</h5>
+												<p><span style=" text-align: justify; color:#FF590F"><em> We are pleased to inform you that our publication fee has been reduced from NGN 22,000 to NGN 18,000 (online and print 2 hard copies), or NGN 15, 000 for online only.</em></span></p> 
 											</div>
 											<hr>
 										</div>
@@ -1062,7 +1062,12 @@ $stmt32->execute();
 						</div>
 						
 				  </div>
-				  <div class="sidebar-row">
+				</div>
+				</div>
+				<br>
+				<div class="rsidebar-top">
+
+				  <div class="sidebar-row" style="margin-top: 0px;">
 				    <h4>ALL JOURNALS</h4>
 						<ul class="faq">
 							<li class="item1"><a href="#">Sciences<span class="glyphicon glyphicon-menu-down"></span></a>
@@ -1175,35 +1180,11 @@ $stmt32->execute();
 										</div>
 										
 						</div>
-<!--
-						<a href="home/" class="list-group-item"><i class="ti ti-email"></i>Home </a> 
-						<a href="faq/" class="list-group-item"><i class="ti ti-eye"></i>FAQ</a> 
-                        <a href="editors/?j=IJEMT" class="list-group-item"><i class="ti ti-comments"></i>Editorial Board</a>
-						<a href="submit/" class="list-group-item"><i class="ti ti-comments"></i>Submit Manuscript Online</a>
-                        <a href="guide/" class="list-group-item"> <i class="ti ti-headphone-alt"></i>Manuscript Guidelines</a> 
-					
-                    <a href="pay/" class="list-group-item"><i class="ti ti-email"></i>Make Payment</a> 
-						<a href="publicationfee/" class="list-group-item"><i class="ti ti-eye"></i>Publication Fees</a> 
--->	
+
 				  </div>			 
 				</div>
 				
-<!--
-				<div class="gallery-grid ">
-					<h6></h6>
-					<a href="journals/"><img src="images/b1.png" class="img-responsive" alt=""/></a>
-					<div class="gallery-text simpleCart_shelfItem">
-						<h5><a class="name" >IIARD PUBLICATIONS</a></h5>
-						<p><span class="item_price"></span></p>
-						
-						<ul>
-							<li><a href="#"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></li>
-							
-							<li><a href="#"><span class="glyphicon glyphicon glyphicon-heart-empty" aria-hidden="true"></span></a></li>
-						</ul>
-					</div>
-				</div>
--->
+				
 			</div>
 			<div class="clearfix"> </div>
             
@@ -1219,7 +1200,7 @@ $stmt32->execute();
         
 			<div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
 				<h3 class="title">Recent<span> Publications</span></h3>
-                <h3 class="hdg">AUGUST 2017</h3>
+                <h3 class="hdg">OCTOBER 2017</h3>
 				<p>To view all journals click <a href="journals/">here</a> </p>
                 
 			</div>
@@ -1730,7 +1711,7 @@ $item.slideUp(1000,function(){
 });
 }
 cycle($('#cycler div:first'),  $('#cycler'));
-	cycle($('#news div:first'),  $('#news'));
+cycle($('#news div:first'),  $('#news'));
 </script>
 </body>
 </html>
